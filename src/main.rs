@@ -65,7 +65,7 @@ async fn main() {
     let app = Router::new()
         .route("/ws/stats", get(ws_handler));
 
-    let addr = SocketAddr::from(([127, 0, 0, 1], 8000));
+    let addr = SocketAddr::from(([127, 0, 0, 1], 6666));
     println!("Listening on ws://{}", addr);
 
     let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();

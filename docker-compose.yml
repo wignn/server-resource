@@ -1,0 +1,10 @@
+
+services:
+  monitoring:
+    build: .
+    image: monitoring:latest
+    ports:
+      - "6666:6666"
+    environment:
+      - RUST_LOG=info
+    restart: unless-stopped
